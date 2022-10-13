@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border-custom::after {
+  content: '';
+  height: 0;
+  width: calc(100% + 4px);
+  position: absolute;
+  top: calc(100% + 2px);
+  left: -2px;
+  border-top: 4px solid #e52254;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+}
+
+.border-custom:hover ::after {
+  border-top: 4px solid red;
+}
